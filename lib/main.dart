@@ -1,3 +1,4 @@
+import 'package:bettingapp/Color/colortask.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -29,11 +30,11 @@ class _MyAppsState extends State<MyApps> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 216, 241, 254),
       body: Padding(
         padding: const EdgeInsets.all(5.0),
         child: ListView(
           children: [
+            // ignore: sized_box_for_whitespace
             Container(
               height: 70,
               width: 300,
@@ -101,7 +102,7 @@ class _MyAppsState extends State<MyApps> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => const MyApp())));
+                              builder: ((context) => const Task1cc())));
                       _isExpanded = !_isExpanded;
                     },
                     child: Padding(
@@ -110,7 +111,7 @@ class _MyAppsState extends State<MyApps> {
                         shadowColor: Colors.black,
                         elevation: 30,
                         child: AnimatedContainer(
-                          duration: Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 500),
                           curve: Curves.easeIn,
                           width: 350,
                           margin: const EdgeInsets.all(8),
@@ -137,7 +138,7 @@ class _MyAppsState extends State<MyApps> {
                                               fontSize: 35,
                                               fontWeight: FontWeight.w600)),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 80,
                                     ),
                                     Image.asset(
